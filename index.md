@@ -1,6 +1,5 @@
-## Welcome to GitHub Pages
+## Welcome to My Github https://github.com/lysontrung/lysontrung.github.io
 
-You can use the [editor on GitHub](https://github.com/lysontrung/lysontrung.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
 # Header 1
 ## Header 2
