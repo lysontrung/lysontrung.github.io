@@ -12,13 +12,10 @@
 * Calendar
 * Form Ajax
 * Game Monter
-
 # HTML5 Canvas
 * Bai tap 
-
 # Responsive
 * Bai tap 
-
 # Jquery
 * Bai tap
 
