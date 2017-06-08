@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="qltaisanModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CHITIETNHAPTS">
+    <Key>
+      <PropertyRef Name="MACHITIETNHAP" />
+    </Key>
+    <Property Name="MACHITIETNHAP" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NHANVIEN" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="MANHAPTS" Type="int" Nullable="false" />
+    <Property Name="MATAISAN" Type="int" Nullable="false" />
+    <Property Name="SOLUONG" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="DONVITINH">
+    <Key>
+      <PropertyRef Name="MADONVITINH" />
+    </Key>
+    <Property Name="MADONVITINH" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TENDONVITINH" Type="nvarchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="KIEMKE">
+    <Key>
+      <PropertyRef Name="MAKIEMKE" />
+    </Key>
+    <Property Name="MAKIEMKE" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NGAYKIEMKE" Type="datetime" Nullable="false" />
+    <Property Name="MATAISAN" Type="int" Nullable="false" />
+    <Property Name="NHANVIEN" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="MATINHTRANG" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LOAITAISAN">
+    <Key>
+      <PropertyRef Name="MALOAI" />
+    </Key>
+    <Property Name="MALOAI" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TENLOAI" Type="nvarchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NHAPTS">
+    <Key>
+      <PropertyRef Name="MANHAPTS" />
+    </Key>
+    <Property Name="MANHAPTS" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NGAYNHAP" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TAISAN">
+    <Key>
+      <PropertyRef Name="MATAISAN" />
+    </Key>
+    <Property Name="MATAISAN" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MALOAI" Type="int" Nullable="false" />
+    <Property Name="TENTAISAN" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="MADONVITINH" Type="int" Nullable="false" />
+    <Property Name="GIA" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="THANHLY">
+    <Key>
+      <PropertyRef Name="MATHANHLY" />
+    </Key>
+    <Property Name="MATHANHLY" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MATAISAN" Type="int" Nullable="false" />
+    <Property Name="GIATRITHANHLY" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="SOLUONG" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TINHTRANG">
+    <Key>
+      <PropertyRef Name="MATINHTRANG" />
+    </Key>
+    <Property Name="MATINHTRANG" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TINHTRANG" Type="nvarchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_CHITIETNHAPTS_NHAPTS">
+    <End Role="NHAPTS" Type="Self.NHAPTS" Multiplicity="1" />
+    <End Role="CHITIETNHAPTS" Type="Self.CHITIETNHAPTS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NHAPTS">
+        <PropertyRef Name="MANHAPTS" />
+      </Principal>
+      <Dependent Role="CHITIETNHAPTS">
+        <PropertyRef Name="MANHAPTS" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CHITIETNHAPTS_TAISAN">
+    <End Role="TAISAN" Type="Self.TAISAN" Multiplicity="1" />
+    <End Role="CHITIETNHAPTS" Type="Self.CHITIETNHAPTS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TAISAN">
+        <PropertyRef Name="MATAISAN" />
+      </Principal>
+      <Dependent Role="CHITIETNHAPTS">
+        <PropertyRef Name="MATAISAN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_KIEMKE_MATINHTRANG">
+    <End Role="TINHTRANG" Type="Self.TINHTRANG" Multiplicity="1" />
+    <End Role="KIEMKE" Type="Self.KIEMKE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TINHTRANG">
+        <PropertyRef Name="MATINHTRANG" />
+      </Principal>
+      <Dependent Role="KIEMKE">
+        <PropertyRef Name="MATINHTRANG" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_KIEMKE_TAISAN">
+    <End Role="TAISAN" Type="Self.TAISAN" Multiplicity="1" />
+    <End Role="KIEMKE" Type="Self.KIEMKE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TAISAN">
+        <PropertyRef Name="MATAISAN" />
+      </Principal>
+      <Dependent Role="KIEMKE">
+        <PropertyRef Name="MATAISAN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TAISAN_DONVITINH">
+    <End Role="DONVITINH" Type="Self.DONVITINH" Multiplicity="1" />
+    <End Role="TAISAN" Type="Self.TAISAN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DONVITINH">
+        <PropertyRef Name="MADONVITINH" />
+      </Principal>
+      <Dependent Role="TAISAN">
+        <PropertyRef Name="MADONVITINH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TAISAN_LOAITAISAN">
+    <End Role="LOAITAISAN" Type="Self.LOAITAISAN" Multiplicity="1" />
+    <End Role="TAISAN" Type="Self.TAISAN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LOAITAISAN">
+        <PropertyRef Name="MALOAI" />
+      </Principal>
+      <Dependent Role="TAISAN">
+        <PropertyRef Name="MALOAI" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_THANHLY_TAISAN">
+    <End Role="TAISAN" Type="Self.TAISAN" Multiplicity="1" />
+    <End Role="THANHLY" Type="Self.THANHLY" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TAISAN">
+        <PropertyRef Name="MATAISAN" />
+      </Principal>
+      <Dependent Role="THANHLY">
+        <PropertyRef Name="MATAISAN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="qltaisanModelStoreContainer">
+    <EntitySet Name="CHITIETNHAPTS" EntityType="Self.CHITIETNHAPTS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DONVITINH" EntityType="Self.DONVITINH" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="KIEMKE" EntityType="Self.KIEMKE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LOAITAISAN" EntityType="Self.LOAITAISAN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NHAPTS" EntityType="Self.NHAPTS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TAISAN" EntityType="Self.TAISAN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="THANHLY" EntityType="Self.THANHLY" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TINHTRANG" EntityType="Self.TINHTRANG" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_CHITIETNHAPTS_NHAPTS" Association="Self.FK_CHITIETNHAPTS_NHAPTS">
+      <End Role="NHAPTS" EntitySet="NHAPTS" />
+      <End Role="CHITIETNHAPTS" EntitySet="CHITIETNHAPTS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CHITIETNHAPTS_TAISAN" Association="Self.FK_CHITIETNHAPTS_TAISAN">
+      <End Role="TAISAN" EntitySet="TAISAN" />
+      <End Role="CHITIETNHAPTS" EntitySet="CHITIETNHAPTS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KIEMKE_MATINHTRANG" Association="Self.FK_KIEMKE_MATINHTRANG">
+      <End Role="TINHTRANG" EntitySet="TINHTRANG" />
+      <End Role="KIEMKE" EntitySet="KIEMKE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KIEMKE_TAISAN" Association="Self.FK_KIEMKE_TAISAN">
+      <End Role="TAISAN" EntitySet="TAISAN" />
+      <End Role="KIEMKE" EntitySet="KIEMKE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TAISAN_DONVITINH" Association="Self.FK_TAISAN_DONVITINH">
+      <End Role="DONVITINH" EntitySet="DONVITINH" />
+      <End Role="TAISAN" EntitySet="TAISAN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TAISAN_LOAITAISAN" Association="Self.FK_TAISAN_LOAITAISAN">
+      <End Role="LOAITAISAN" EntitySet="LOAITAISAN" />
+      <End Role="TAISAN" EntitySet="TAISAN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_THANHLY_TAISAN" Association="Self.FK_THANHLY_TAISAN">
+      <End Role="TAISAN" EntitySet="TAISAN" />
+      <End Role="THANHLY" EntitySet="THANHLY" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

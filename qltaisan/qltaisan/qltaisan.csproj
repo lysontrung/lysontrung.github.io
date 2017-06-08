@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{677FCCAF-085B-454D-ABCB-F9BA5DDF4E18}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>qltaisan</RootNamespace>
+    <AssemblyName>qltaisan</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CHITIETNHAPT.cs">
+      <DependentUpon>qltaisan.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dataReportKiemke.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dataReportKiemke.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="dataReportTaisan.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dataReportTaisan.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="dataReportThanhly.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dataReportThanhly.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSetKiemke.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetKiemke.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetTaisan.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetTaisan.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DONVITINH.cs">
+      <DependentUpon>qltaisan.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KIEMKE.cs">
+      <DependentUpon>qltaisan.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LOAITAISAN.cs">
+      <DependentUpon>qltaisan.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NHAPT.cs">
+      <DependentUpon>qltaisan.tt</DependentUpon>
+    </Compile>
+    <Compile Include="qltaisan.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>qltaisan.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="qltaisan.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>qltaisan.tt</DependentUpon>
+    </Compile>
+    <Compile Include="qltaisan.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>qltaisan.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportLayer\reportKiemke.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportLayer\reportKiemke.Designer.cs">
+      <DependentUpon>reportKiemke.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportLayer\reportTaisan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportLayer\reportTaisan.Designer.cs">
+      <DependentUpon>reportTaisan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportLayer\reportThanhly.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportLayer\reportThanhly.Designer.cs">
+      <DependentUpon>reportThanhly.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TAISAN.cs">
+      <DependentUpon>qltaisan.tt</DependentUpon>
+    </Compile>
+    <Compile Include="THANHLY.cs">
+      <DependentUpon>qltaisan.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TINHTRANG.cs">
+      <DependentUpon>qltaisan.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\trangGiaodien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\trangGiaodien.Designer.cs">
+      <DependentUpon>trangGiaodien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PresentationLayer\trangKiemke.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\trangKiemke.Designer.cs">
+      <DependentUpon>trangKiemke.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\trangTaisan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\trangTaisan.Designer.cs">
+      <DependentUpon>trangTaisan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\trangThanhly.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\trangThanhly.Designer.cs">
+      <DependentUpon>trangThanhly.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\trangNhaptaisan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\trangNhaptaisan.Designer.cs">
+      <DependentUpon>trangNhaptaisan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\trangThongke.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\trangThongke.Designer.cs">
+      <DependentUpon>trangThongke.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="dataReportKiemke.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>dataReportKiemke.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dataReportTaisan.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>dataReportTaisan.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dataReportThanhly.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>dataReportThanhly.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ReportLayer\reportKiemke.resx">
+      <DependentUpon>reportKiemke.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportLayer\reportTaisan.resx">
+      <DependentUpon>reportTaisan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\trangGiaodien.resx">
+      <DependentUpon>trangGiaodien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\trangKiemke.resx">
+      <DependentUpon>trangKiemke.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\trangTaisan.resx">
+      <DependentUpon>trangTaisan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\trangThanhly.resx">
+      <DependentUpon>trangThanhly.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\trangNhaptaisan.resx">
+      <DependentUpon>trangNhaptaisan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\trangThongke.resx">
+      <DependentUpon>trangThongke.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportLayer\reportThanhly.resx">
+      <DependentUpon>reportThanhly.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DataSetKiemke.xsc">
+      <DependentUpon>DataSetKiemke.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetKiemke.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetKiemke.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetKiemke.xss">
+      <DependentUpon>DataSetKiemke.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetTaisan.xsc">
+      <DependentUpon>DataSetTaisan.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetTaisan.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetTaisan.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetTaisan.xss">
+      <DependentUpon>DataSetTaisan.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EntityDeploy Include="qltaisan.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>qltaisan.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="qltaisan.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>qltaisan.edmx</DependentUpon>
+      <LastGenOutput>qltaisan.Context.cs</LastGenOutput>
+    </None>
+    <None Include="qltaisan.edmx.diagram">
+      <DependentUpon>qltaisan.edmx</DependentUpon>
+    </None>
+    <None Include="qltaisan.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>qltaisan.edmx</DependentUpon>
+      <LastGenOutput>qltaisan.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DataReport\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
