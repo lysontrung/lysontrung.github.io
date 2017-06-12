@@ -1,5 +1,5 @@
 # HTML - CSS
-* [Lý thuyết 1]
+* [Lý thuyết 1](https://lysontrung.github.io/LyThuyet1/)
 * [Lý thuyết 2]
 * [Lý thuyết 3]
 * [Thực hành 1]
