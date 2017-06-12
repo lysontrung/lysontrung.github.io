@@ -1,0 +1,31 @@
+body{
+	font-family:Geogria, 'Time New Roman', Times, serif;
+}
+#container{
+	/*margin-left: auto;
+	margin-right: auto;
+	width: 50px;
+	border: 1px soild #0033FF;
+	overflow: auto;*/
+	margin:0;
+	padding:0;
+}
+
+p{
+	font-size: 18px;
+}
+
+#container #title{
+	height: 30px;
+	background: url('images/title_background') repeat;
+	line-height: 30px;
+	font-weight: bold;
+}
+
+#container #info info{
+	overflow:scroll;
+}
+
+#container #post #wrap #content{
+	background-color: #ECECEC;
+}
