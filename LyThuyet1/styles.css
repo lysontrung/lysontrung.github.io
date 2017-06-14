@@ -14,7 +14,7 @@ body {
 }
 /*profile-player*/
 .profile .title {
-  background: url(images/title_bg.gif) repeat-x;
+  background: url(images/title_background.gif) repeat-x;
   height: 25px;
   line-height: 25px;
 }
