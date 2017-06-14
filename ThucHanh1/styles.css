@@ -51,18 +51,18 @@ img.img_intro{
 }
 
 .menu {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: flex;
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
-  -ms-justify-content: center;
-  -o-justify-content: center;
-  justify-content: center;
-  padding: 20px;
-  border: 1px solid #474a51;
+  	display: -webkit-flex;
+  	display: -moz-flex;
+  	display: -ms-flex;
+  	display: -o-flex;
+  	display: flex;
+  	-webkit-justify-content: center;
+  	-moz-justify-content: center;
+  	-ms-justify-content: center;
+  	-o-justify-content: center;
+  	justify-content: center;
+  	padding: 20px;
+  	border: 1px solid #474a51;
 }
 
 .item {
