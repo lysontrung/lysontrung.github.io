@@ -1,0 +1,145 @@
+* {
+	margin:0;
+	padding:0;
+}
+
+
+body {
+	font-family: Verdana, "Arial", Helvetica, sans-serif;
+}
+
+#container {
+	margin: 0 auto;
+	background: #2d2f35;
+	color: white;	
+}
+/* thuoc tinh border do day, kieu duong vien, ma mau*/
+.logo {
+	border-bottom: 1px solid #474a51;
+	padding: 0 6px;
+}
+
+.banner{
+	position: relative;
+	height: 300px;
+	background: url(images/bg_home_intro.gif) repeat-x;
+	border-bottom: 1px solid #474a51;
+}
+
+.content{
+	width:42%;
+	margin-left:10%;
+}
+
+.content h2{
+	font-size: 20px;
+	font-family: monospace;
+	color: #ffff00;
+	font-weight: 300;
+}
+
+.content p{
+	margin-top: 30px;
+	font-size: 12px;
+	color: #cccccc;
+}
+
+img.img_intro{
+	right: 10%;
+	position: absolute;
+	bottom: 0px;
+}
+
+.menu {
+  	display: -webkit-flex;
+  	display: -moz-flex;
+  	display: -ms-flex;
+  	display: -o-flex;
+  	display: flex;
+  	-webkit-justify-content: center;
+  	-moz-justify-content: center;
+  	-ms-justify-content: center;
+  	-o-justify-content: center;
+  	justify-content: center;
+  	padding: 20px;
+  	border: 1px solid #474a51;
+}
+
+.item {
+	position: relative;
+	margin-left: 20px;
+}
+
+img.index{
+	position: absolute;
+	top:4px;
+	right:4px;
+}
+
+.main{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-justify-content: center;
+	-moz-justify-content: center;
+	-ms-justify-content: center;
+	-o-justify-content: center;
+	justify-content: center;
+	padding: 20px;
+	border: 1px solid #474a51;
+}
+
+.content.left{
+	margin-left: 10%;
+	background: url(images/home_services_bg_design.gif) no-repeat right bottom;
+}
+
+.content.right{
+	background: url(images/home_services_bg_marketing.gif) no-repeat;
+	margin-right:110px;
+}
+
+.content h3 {
+	font-size: 20px;
+	font-family: monospace;
+	color: #ffff00;
+	font-weight: 600;
+}
+
+.footer {
+	height: 120px;
+	background: #24262a url(images/bg_footer.gif) center no-repeat;
+	text-align: center;
+}
+
+.content p {
+	font-size:14px;
+	color:#cccccc;
+}
+
+.content.right p {
+	margin-top:12%;
+}
+
+.content {
+	text-align:justify;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
