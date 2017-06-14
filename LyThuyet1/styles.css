@@ -23,6 +23,10 @@ body {
   font-weight: bold;
 }
 
+.title-facts span {
+  font-weight: bold;
+}
+
 .player-info {
   display: -webkit-flex;
   display: -moz-flex;
