@@ -25,12 +25,15 @@ div#header {
     height: 116px;
 }
 
-.logan h2 {
+.logan h1 {
 	font-style: bold;
 	color: black;
     font-size: 40px;
     margin-top: 35px;
     margin-left: 95px;
+}
+.dot {
+	color:#595959;
 }
 
 .nav {
