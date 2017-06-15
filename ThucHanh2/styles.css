@@ -158,3 +158,7 @@ a.web-info:before {
   padding-bottom: 20px;
   border-bottom: 1px dotted #323232;
 }
+
+.footer a {
+	color: #7e7e7e;
+}
