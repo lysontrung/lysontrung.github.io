@@ -21,7 +21,11 @@
 								<img src="images/title_1.jpg" alt="title_1">
 								<a href="#">more</a>
 							</div>
-						</div>
+							<div class="content">
+								<h4>RUSSEL CROWE + MORE ...</h4>
+								<p>RUSSEL Crowe's son to marry Keith & Nicole's daugher, plus Renee Zellweger reveals her breast cancer scare</p>
+							</div>
+					</div>
 						
 						<div id="box-right">
 							<div class="title">
@@ -33,6 +37,10 @@
 								<img src="images/title_2.jpg" alt="title_2">
 								<a href="#">more</a>
 							</div>
+							<div class="content">
+								<h4>BECKHAMS, CLAUDIA SCHIFFER</h4>
+								<p>VICTORIA and David Beckham dine out in NY, as top models Claudia Schiffer and Eva Herzigova hit the shops in Milan.</p>
+							</div>			
 						</div>	
 					</div>
 					
@@ -72,7 +80,7 @@
 						<div id="box-right">
 							<div class="title">
 								<h3>MOVIE REVIEWS</h3>
-								<div class="review-1">
+								<div class="review">
 									<h3 class="start-3">Eagle Eye</h3>
 									<div class="image-movie">
 										<img src="images/m_eagle.jpg" alt="m_eagle"> <br>
@@ -81,7 +89,7 @@
 									<p>SHIA LaBeouf hits the ground running in Eagle Eye, an against the clock thriller with a timely technological t...</p>		
 								</div>
 								
-								<div class="review-2">
+								<div class="review">
 									<h3 class="start-2">Houses Bunny</h3>
 									<div class="image-movie">
 										<img src="images/m_house.jpg" alt="house"> <br>
@@ -90,7 +98,7 @@
 									<p>IF YOU left Legally Blonde and Revenge Of The Nerds DVD in a darkened room for long enough, something like The House Bun...</p>							
 								</div>
 								
-								<div class="review-3">
+								<div class="review-local">
 									<a href="#"><b>Local Cinema listings</b></a>
 									<a href="#"><span>+ MORE MOVIES</span></a>
 								</div>
@@ -107,15 +115,48 @@
 			</div>
 				
 			<div id="footer">
-				<div class="link-web">
-					<a href="#">Help</a> | <a href="#">Contact Us</a> | <a href="#">Advertise with Us</a> | <a href="#">Job Opportunities</a> | <a href="#">Term & Conditions</a> | <a href="#">Privacy Policy</a> |  <a href="#">Accessibility</a> | <a href="#">Sitemap</a> | <a href="#">News Headlines from Our Partners</a>
-					<a class="to-top" href="#" onclick="topFunction()">Back to top</a>
+				<div class="footer-news">
+					<a href="#"><img src="images/f_phone.png" alt=""></a>
+					<a href="#"><img src="images/f_feed.png" alt=""></a>
+					<a href="#"><img src="images/f_letter.png" alt=""></a>
+					<a href="#"><img src="images/f_chat.png" alt=""></a>
+					<a href="#"><img src="images/f_photo.jpg" alt=""></a>
 				</div>
-				<div class="copyright">
-					Copyright 2008 News Limited. All times AEST (GMT +10)
-				</div>
+				
+				<div class="outtro" >
+					<div class="link-web">
+						<a href="#">Help</a> | <a href="#">Contact Us</a> | <a href="#">Advertise with Us</a> | <a href="#">Job Opportunities</a> | <a href="#">Term & Conditions</a> | <a href="#">Privacy Policy</a> |  <a href="#">Accessibility</a> | <a href="#">Sitemap</a> | <a href="#">News Headlines from Our Partners</a>
+						<a class="to-top" href="#" onclick="topFunction()">Back to top</a>
+					</div>
+					<div class="copyright">
+						Copyright 2008 News Limited. All times AEST (GMT +10)
+					</div>
+				</div>	
 			</div>
 		</div>
+		
+		<script>
+			var acc = document.getElementsByClassName("accordion");
+			var i;
+
+			for (i = 0; i < acc.length; i++) {
+			  acc[i].onclick = function() {
+				this.classList.toggle("active");
+				var panel = this.nextElementSibling;
+				if (panel.style.maxHeight){
+				  panel.style.maxHeight = null;
+				} else {
+				  panel.style.maxHeight = 10 + panel.scrollHeight + "px";
+				} 
+			  };
+			}
+
+			function topFunction() {
+				document.body.scrollTop = 0; // For Chrome, Safari and Opera 
+				document.documentElement.scrollTop = 0; // For IE and Firefox
+			}
+		</script>
+
 	</body>
 </html>
 	
