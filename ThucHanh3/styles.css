@@ -28,7 +28,7 @@ div#body {
 	display: flex;
 }
 
-#body #content-1 .box-left {
+#content-1 .box-left {
 	border-right: 1px dotted;
 }
 
