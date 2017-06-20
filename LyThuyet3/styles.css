@@ -24,10 +24,6 @@ h3 {
 #content-1 .box-1 {
   padding: 10px;
   background: white;
-  display: -o-flex;
-  display: -o-flex;
-  display: -o-flex;
-  display: -o-flex;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
@@ -58,10 +54,6 @@ h3 {
 #content-2 .box-1 {
   padding: 10px;
   background: white;
-  display: -o-flex;
-  display: -o-flex;
-  display: -o-flex;
-  display: -o-flex;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
@@ -131,26 +123,6 @@ h3 {
   -ms-text-decoration: none;
   -o-text-decoration: none;
   text-decoration: none;
-  -webkit-text-decoration: none;
-  -moz-text-decoration: none;
-  -ms-text-decoration: none;
-  -o-text-decoration: none;
-  text-decoration: none;
-  -webkit-text-decoration: none;
-  -moz-text-decoration: none;
-  -ms-text-decoration: none;
-  -o-text-decoration: none;
-  text-decoration: none;
-  -webkit-text-decoration: none;
-  -moz-text-decoration: none;
-  -ms-text-decoration: none;
-  -o-text-decoration: none;
-  text-decoration: none;
-  -webkit-text-decoration: none;
-  -moz-text-decoration: none;
-  -ms-text-decoration: none;
-  -o-text-decoration: none;
-  text-decoration: none;
   color: #0a6395;
 }
 
@@ -163,26 +135,6 @@ h3 {
 }
 
 #content-4 a {
-  -webkit-text-decoration: none;
-  -moz-text-decoration: none;
-  -ms-text-decoration: none;
-  -o-text-decoration: none;
-  text-decoration: none;
-  -webkit-text-decoration: none;
-  -moz-text-decoration: none;
-  -ms-text-decoration: none;
-  -o-text-decoration: none;
-  text-decoration: none;
-  -webkit-text-decoration: none;
-  -moz-text-decoration: none;
-  -ms-text-decoration: none;
-  -o-text-decoration: none;
-  text-decoration: none;
-  -webkit-text-decoration: none;
-  -moz-text-decoration: none;
-  -ms-text-decoration: none;
-  -o-text-decoration: none;
-  text-decoration: none;
   -webkit-text-decoration: none;
   -moz-text-decoration: none;
   -ms-text-decoration: none;
