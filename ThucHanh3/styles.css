@@ -5,12 +5,12 @@
 }
 
 div#container {
-    background: black;
+    	background: black;
 }
 
 div#content {
-    background: #292728;
-    border-bottom: 1px dashed white;
+	    background: #292728;
+	border-bottom: 1px dashed white;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -26,6 +26,10 @@ div#body {
     padding: 10px 0;
     margin: 0 auto;
 	display: flex;
+}
+
+#body #content-1 .box-left {
+	border-right: 1px dotted;
 }
 
 #body .content {
