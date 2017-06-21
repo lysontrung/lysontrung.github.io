@@ -27,7 +27,7 @@ div#header {
 
 .logan h1 {
   font-style: bold;
-  color: black;
+  color: black
   font-size: 40px;
   margin-top: 35px;
   margin-left: 95px;
@@ -64,7 +64,7 @@ div#header {
 .body {
   margin-top: 114px;
   margin-left: 70px;
-  width: 672px;
+  width: 710px;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
@@ -76,11 +76,12 @@ div#header {
 .sidebar {
   box-sizing: border-box;
   background: #1f1f1f;
-  padding: 50px 35px;
+  padding: 50px 20px;
   height: 450px;
 }
 
 .sidebar-up {
+  padding-left: 11px;
   border-top: 1px solid #7e7e7e;
   padding-top: 30px;
   padding-bottom: 70px;
@@ -92,7 +93,7 @@ div#header {
 }
 
 .sidebar-down li {
-  margin-left: 26px;
+  margin-left: 32px;
 }
 
 .sidebar-down li:before {
@@ -153,7 +154,6 @@ a.web-info {
 
 a.web-info:before {
   content: url(images/arr_1.gif);
-  padding: 5px;
 }
 
 #content p {
