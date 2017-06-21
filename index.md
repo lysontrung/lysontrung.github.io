@@ -7,7 +7,7 @@
 * [Thực hành 3](https://lysontrung.github.io/ThucHanh3/)
 
 # Javascript
-* [Slide ảnh]
+* [Slide ảnh](https://lysontrung.github.io/Slide Image/)
 * Calendar
 * Form Ajax
 * Game Monter
