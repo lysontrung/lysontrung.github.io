@@ -24,10 +24,11 @@ div#container {
   width: 1000px;
   color: #797782;
   background:#121214;
-  display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
   display: -o-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .content-box {
@@ -181,7 +182,6 @@ li:before {
 .box-right a.info {
   padding-left: 0
 }
-
 
 
 
