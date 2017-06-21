@@ -37,6 +37,10 @@ div#body {
   padding: 10px;
 }
 
+#content-2 #box-left {
+  height: 220px;
+}
+
 #box-left .content {
   padding:0;
 }
