@@ -19,8 +19,8 @@ div#header {
 .logan {
   background: url(images/logo.jpg) no-repeat;
   position: absolute;
-  top: 53px;
-  left: 50px;
+  top: 54px;
+  left: 51px;
   width: 353px;
   height: 116px;
 }
@@ -64,7 +64,7 @@ div#header {
 .body {
   margin-top: 114px;
   margin-left: 70px;
-  width: 670px;
+  width: 672px;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
