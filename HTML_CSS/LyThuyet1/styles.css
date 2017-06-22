@@ -23,6 +23,10 @@ body {
   font-weight: bold;
 }
 
+.title-facts span {
+  font-weight: bold;
+}
+
 .player-info {
   display: -webkit-flex;
   display: -moz-flex;
@@ -70,7 +74,7 @@ body {
 
 .post {
     margin-top: 40px;
-    padding: 0 4px;
+    padding: 4px;
 }
 
 .post-author a {
@@ -81,7 +85,7 @@ body {
 span.post-author {
   margin-left: 16%;
   display: block;
-  padding: 1px 0;
+  padding: 1px;
 }
 
 .post-contain {
@@ -103,9 +107,6 @@ span.post-author {
 .post-contain {
   position: relative;
 }
-
-
-
 
 .comment h3 {
   text-align: center;
