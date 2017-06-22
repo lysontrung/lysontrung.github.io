@@ -16,13 +16,13 @@
 				<img class="mySlides" src="images/3.jpg" >
 				<img class="mySlides" src="images/4.jpg" >
 				<img class="mySlides" src="images/5.jpg" >
-				<img class="mySlides" src="images/6.jpg" 
+				<img class="mySlides" src="images/6.jpg" >
 			</div>
 			
 			<div class="content">
 				<div class="button">
-					<button class="pr-ne" onclick="plusDivs(-1)">❮ Prev</button>
-					<button class="pr-ne" onclick="plusDivs(1)">Next ❯</button>
+					<button class="pr-ne" onclick="plusDivs(-1)">< Prev</button>
+					<button class="pr-ne" onclick="plusDivs(1)">Next ></button>
 				</div>
 			
 				<button class="btn" onclick="currentDiv(1)">1</button> 
@@ -49,17 +49,19 @@
 			function showDivs(n) {
 			  var i;
 			  var x = document.getElementsByClassName("mySlides");
-			  var dots = document.getElementsByClassName("btn");
-			  if (n > x.length) {slideIndex = 1}    
-			  if (n < 1) {slideIndex = x.length}
+			  var btns = document.getElementsByClassName("btn");
+			  if (n > x.length) 
+				{slideIndex = 1}    
+			  if (n < 1) 
+				{slideIndex = x.length}
 			  for (i = 0; i < x.length; i++) {
 				 x[i].style.display = "none";  
 			  }
-			  for (i = 0; i < dots.length; i++) {
-				 dots[i].className = dots[i].className.replace(" red", "");
+			  for (i = 0; i < btns.length; i++) {
+				 btns[i].className = btns[i].className.replace(" red", "");
 			  }
 			  x[slideIndex-1].style.display = "block";  
-			  dots[slideIndex-1].className += " red";
+			  btns[slideIndex-1].className += " red";
 			}
 		</script>
 	</body>
