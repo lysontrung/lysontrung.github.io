@@ -35,34 +35,51 @@
 		</div>
 		
 		<script>
+		
+			// mặc định ảnh đầu tiên ở vị trị 1
 			var slideIndex = 1;
 			showDivs(slideIndex);
 
+			// click vào button prev vị trí ++
 			function plusDivs(n) {
-			  showDivs(slideIndex += n);
+				showDivs(slideIndex += n);
 			}
 
+			// xét lại vị tri hiện tại cho hình ảnh
 			function currentDiv(n) {
-			  showDivs(slideIndex = n);
+				showDivs(slideIndex = n);
 			}
 
 			function showDivs(n) {
-			  var i;
-			  var x = document.getElementsByClassName("mySlides");
-			  var btns = document.getElementsByClassName("btn");
-			  /*Xét vị trí và đổi trạng thái ảnh*/
-			  if (n > x.length) 
+				/*khi báo 3 biến
+				i dùng cho vòng lặp
+				x tương ứng với class hình ảnh
+				btns tương ứng với button xác định vị trí
+				*/
+				var i;
+				var x = document.getElementsByClassName("mySlides");
+				var btns = document.getElementsByClassName("btn");
+				
+				/*Xét vị trí và đổi trạng thái ảnh
+				nếu vị trí hình ảnh vượt quá chiều dài của chuỗi ảnh thì quay lại bằng 1
+				*/
+				if (n > x.length) 
 				{slideIndex = 1}    
-			  if (n < 1) 
+				if (n < 1) 
 				{slideIndex = x.length}
-			  for (i = 0; i < x.length; i++) {
-				 x[i].style.display = "none";  
-			  }
-			  for (i = 0; i < btns.length; i++) {
-				 btns[i].className = btns[i].className.replace("red");
-			  }
-			  x[slideIndex-1].style.display = "block";  
-			  btns[slideIndex-1].className += " red";
+				
+				/*
+				xét vị trí hình
+				*/
+				for (i = 0; i < x.length; i++) {
+					x[i].style.display = "none";  
+				}
+				for (i = 0; i < btns.length; i++) {
+					btns[i].className = btns[i].className.replace("red");
+				}
+				
+				x[slideIndex-1].style.display = "block";  
+				btns[slideIndex-1].className += "red";
 			}
 		</script>
 	</body>
