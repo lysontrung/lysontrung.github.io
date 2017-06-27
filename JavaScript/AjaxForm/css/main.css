@@ -1,0 +1,90 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #b2dec8;
+	padding-top: 50px;
+	margin: auto;
+}
+
+#container h1 {
+	text-align: center;
+	padding-bottom: 20px;
+}
+
+div#container {
+	width: 500px;
+	margin: auto;
+}
+
+.table .td1 {
+	text-align: right;
+	padding-right: 20px;
+}
+
+.table .td2 {
+	border: none;
+	padding: 4px;
+}
+
+input {
+	border-radius: 8px;
+	height: 30px;
+	width: 390px;
+}
+
+#datepicker {
+	position: relative;
+}
+
+img {
+	position: absolute;
+    right: 3px;
+    top: 2px;
+    height: 25px;
+}	
+
+table#table td {
+	width: 60px;
+	height: 30px;
+	border: 1px solid #fff;
+}
+
+#datepicker tr {
+	display: table-row;
+}
+
+#btn {	
+	margin:0 auto;
+	padding-top:10px;
+	width: 170px;
+}
+
+#btn button {
+	background-color:white;
+	border: none;
+	border-radius:5px;
+	text-transform: uppercase;
+	height: 30px;
+	box-shadow: 
+	-5px 4px 2px #5DADE2,
+	3px -1px 15px #5DADE2,
+	-2px -2px 5px #5DADE2;
+}
+
+#btn button:hover {
+	cursor:pointer;
+}
+
+#btn #refresh {
+	margin-left: 20px;
+}
+
+
+
+
+
+
+
