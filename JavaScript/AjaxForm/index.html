@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="vi">
+    <head>
+		<meta charset="utf-8" />
+		<title>AjaxForm</title>
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<script type="text/javascript" src="js/calendar.js"></script>
+		<script type="text/javascript" charset="UTF-8" src="js/form.js"></script>
+	</head>
+	
+    <body>
+		<div id="container">
+			<h1>FORM LOGIN</h1>
+			<form action="" method="post" action="index.php" onsubmit=" return ValidateForm()">
+				<table class="table">
+					<tr>
+						<td class="td1">Username: </td>
+						<td class="td2"><input type="text" value="" name="username" id="username" placeholder="Username"></td>
+						<td id="usernameError"></td>
+					</tr>
+					<tr>
+						<td class="td1">Password: </td>
+						<td class="td2"><input type="password" value="" name="password" id="password" placeholder="Password"></td>
+						<td id="passwordError"></td>
+					</tr>
+					<tr>
+						<td class="td1">Email: </td>
+						<td class="td2"><input type="input" value="" name="email" id="email" placeholder="Email ></td>
+						<td id="emailError"></td>
+					</tr>
+					<tr>
+						<td class="td1">Birthday: </td>
+						<td class="td2">
+							<div id="datepicker">
+								<input type="text" id="output" name="output" onclick="openCalendar();" />
+								<img src="images/calendar.png" alt="images/calendar.png">
+							</div>
+							<script type="text/javascript">
+								init();
+							</script>
+						</td>
+						<td class="error"></td>
+					</tr>
+				</table>
+			</form>
+			<div id="btn">
+				<button type="button" id="submit" name="submit" onClick="submitForm();">Submit</button>
+				<button type="refresh" id="refresh" name="refresh">Refresh
+				</button>
+			</div>
+		</div>
+	</body>
+</html>
+	
